@@ -1,0 +1,7 @@
+{
+  "name": "ProvaD3Capacitor",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
