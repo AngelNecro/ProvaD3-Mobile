@@ -8,23 +8,23 @@
   <ion-grid>
     <ion-row>
       <ion-col>
-        <ion-form>
+        <ion-form #formularioprova="ngForm" onSubmit="processar(formularioprova)">
           <!-- <form (ngSubmit)="logForm()"> -->
           <ion-item>
             <ion-label>Nome</ion-label>
-            <ion-input type="text" name="nome"></ion-input>
+            <ion-input type="text" name="nome" [(ngModel)]=""></ion-input>
           </ion-item>
           <ion-item>
             <ion-label>idade</ion-label>
-            <ion-input type="number" name="idade"></ion-input>
+            <ion-input type="number" name="idade" [(ngModel)]=""></ion-input>
           </ion-item>
           <ion-item>
             <ion-label>Saúde Mental</ion-label>
-            <ion-input type="text" name="saudeMental"></ion-input>
+            <ion-input type="text" name="saudeMental" [(ngModel)]=""></ion-input>
           </ion-item>
           <ion-item>
             <ion-label>Raça/Cor</ion-label>
-            <ion-input type="text" name="racaCor"></ion-input>
+            <ion-input type="text" name="racaCor" [(ngModel)]=""></ion-input>
           </ion-item>
           <ion-button type="submit" color="dark" block>Cadastrar Pessoa</ion-button>
           <!-- </form> -->

@@ -1,7 +1,8 @@
 {
   "name": "ProvaD3Capacitor",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }

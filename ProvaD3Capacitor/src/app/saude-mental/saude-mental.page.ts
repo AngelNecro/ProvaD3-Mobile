@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { pessoas } from './../pessoa.model'
+import { PessoaServicoService } from '../pessoa-servico.service';
 
 @Component({
   selector: 'app-saude-mental',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SaudeMentalPage implements OnInit {
 
-  constructor() { }
+  constructor(private PessoaServicoService: PessoaServicoService) { }
 
   ngOnInit() {
+  }
+
+  pessoa: pessoas = {} as pessoas;
+
+  processar(form) {
+    this.PessoaServicoService.inserirPessoa(form.value)
   }
 
 }
