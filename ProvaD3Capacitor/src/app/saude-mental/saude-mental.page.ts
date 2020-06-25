@@ -20,4 +20,11 @@ export class SaudeMentalPage implements OnInit {
     this.PessoaServicoService.inserirPessoa(form.value)
   }
 
+  pesquisar(form) {
+    this.PessoaServicoService.getId(form.value.id)
+  }
+
+  pesquisardois(form) {
+    this.PessoaServicoService.getracaCor(form.value.racaCor)
+  }
 }

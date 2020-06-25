@@ -12,19 +12,19 @@
           <!-- <form (ngSubmit)="logForm()"> -->
           <ion-item>
             <ion-label>Nome</ion-label>
-            <ion-input type="text" name="nome" [(ngModel)]=""></ion-input>
+            <ion-input type="text" name="nome" [(ngModel)]="pessoa.nome"></ion-input>
           </ion-item>
           <ion-item>
             <ion-label>idade</ion-label>
-            <ion-input type="number" name="idade" [(ngModel)]=""></ion-input>
+            <ion-input type="number" name="idade" [(ngModel)]="pessoa.idade"></ion-input>
           </ion-item>
           <ion-item>
             <ion-label>Saúde Mental</ion-label>
-            <ion-input type="text" name="saudeMental" [(ngModel)]=""></ion-input>
+            <ion-input type="text" name="saudeMental" [(ngModel)]="pessoa.saudeMental"></ion-input>
           </ion-item>
           <ion-item>
             <ion-label>Raça/Cor</ion-label>
-            <ion-input type="text" name="racaCor" [(ngModel)]=""></ion-input>
+            <ion-input type="text" name="racaCor" [(ngModel)]="pessoa.racaCor"></ion-input>
           </ion-item>
           <ion-button type="submit" color="dark" block>Cadastrar Pessoa</ion-button>
           <!-- </form> -->
@@ -32,8 +32,28 @@
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-button type="submit" color="light" (click)="SearchId()" block>Procurar id</ion-button>
-      <ion-button type="submit" color="warning" (click)="SearchCor()" block>Procurar por Raça/Cor</ion-button>
+      <ion-form #formulariopesquisa="ngForm" onSubmit="pesquisa(formulariopesquisa)">
+        <!-- <form (ngSubmit)="logForm()"> -->
+        <ion-item>
+          <ion-label>id</ion-label>
+          <ion-input type="text" name="id" [(ngModel)]="pessoa.id"></ion-input>
+        </ion-item>
+
+        <ion-button type="submit" color="dark" block>pesquisar Pessoa</ion-button>
+        <!-- </form> -->
+      </ion-form>
+    </ion-row>
+    <ion-row>
+      <ion-form #formulariopesquisadois="ngForm" onSubmit="pesquisadois(formulariopesquisadois)">
+        <!-- <form (ngSubmit)="logForm()"> -->
+        <ion-item>
+          <ion-label>raca</ion-label>
+          <ion-input type="text" name="racaCor" [(ngModel)]="pessoa.racaCor"></ion-input>
+        </ion-item>
+
+        <ion-button type="submit" color="dark" block>pesquisar Pessoa</ion-button>
+        <!-- </form> -->
+      </ion-form>
     </ion-row>
   </ion-grid>
 </ion-content>
